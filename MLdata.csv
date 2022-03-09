@@ -1,0 +1,291 @@
+Feature,Feature,Feature,Feature,Feature,Label
+Student gender,Parent/ guardian had own business,Has a part time job,Urban or rural address,Studies business subjects,Become an 
+,,,,,Entrepreneur
+Female,Yes,No,Rural,No,Yes
+Male,No,Yes,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Female,Yes,Yes,Urban  ,Yes,No
+Male,Yes,Yes,Rural,No,No
+Female,No,No,Rural,No,No
+Female,Yes,No,Rural,Yes,No
+Male,No,No,Urban  ,Yes,No
+Female,Yes,No,Urban  ,Yes,Yes
+Female,No,Yes,Urban  ,Yes,No
+Male,No,Yes,Rural,No,No
+Female,No,No,Rural,No,No
+Female,Yes,Yes,Rural,No,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,No
+Male,No,Yes,Rural,No,No
+Male,No,No,Urban,No,Yes
+Male,No,No,Rural,Yes,Yes
+Female,Yes,No,Rural,No,Yes
+Male,No,Yes,Urban  ,Yes,No
+Male,No,Yes,Urban  ,Yes,Yes
+Male,Yes,Yes,Urban  ,No,Yes
+Male,Yes,Yes,Rural,No,No
+Female,No,No,Rural,No,Yes
+Female,Yes,No,Rural,Yes,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,No,Urban  ,Yes,Yes
+Female,No,Yes,Urban  ,No,Yes
+Male,No,Yes,Rural,No,No
+Female,No,No,Rural,No,No
+Female,Yes,Yes,Rural,No,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,No,Yes,Rural,No,No
+Male,No,No,Urban,No,Yes
+Female,No,No,Rural,Yes,No
+Female,Yes,No,Rural,No,Yes
+Male,No,Yes,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,Yes,Yes,Rural,No,No
+Male,No,No,Rural,No,Yes
+Female,Yes,No,Rural,Yes,Yes
+Male,No,No,Urban  ,Yes,No
+Male,Yes,No,Urban  ,No,No
+Male,No,Yes,Urban  ,No,No
+Male,No,Yes,Rural,No,No
+Female,No,No,Rural,No,No
+Female,Yes,Yes,Rural,No,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,No,Yes,Rural,No,No
+Male,No,No,Urban,No,Yes
+Female,No,No,Rural,Yes,No
+Female,No,No,Rural,No,Yes
+Male,No,Yes,Urban  ,Yes,No
+Female,Yes,No,Urban  ,No,No
+Female,Yes,No,Urban  ,No,No
+Male,Yes,Yes,Rural,No,No
+Male,No,No,Rural,No,No
+Male,Yes,No,Rural,Yes,No
+Male,No,No,Urban  ,Yes,No
+Male,Yes,No,Urban  ,Yes,No
+Male,No,Yes,Urban  ,No,Yes
+Male,No,Yes,Rural,No,No
+Female,No,No,Rural,No,No
+Female,Yes,Yes,Rural,No,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,No,Yes,Rural,No,No
+Male,No,No,Urban,No,Yes
+Female,No,No,Rural,Yes,Yes
+Female,Yes,No,Rural,No,Yes
+Male,No,Yes,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,Yes,Yes,Rural,No,No
+Male,No,No,Rural,No,Yes
+Female,Yes,No,Rural,Yes,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,No,Urban  ,Yes,Yes
+Female,No,Yes,Urban  ,No,Yes
+Male,No,Yes,Rural,No,No
+Female,No,No,Rural,No,No
+Female,Yes,Yes,Rural,No,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,No,Yes,Rural,No,No
+Male,No,No,Urban,No,Yes
+Female,No,No,Rural,Yes,Yes
+Female,Yes,No,Rural,No,Yes
+Male,No,Yes,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,Yes,Yes,Rural,No,No
+Female,No,No,Rural,No,Yes
+Female,Yes,No,Rural,Yes,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,No,Urban  ,Yes,Yes
+Female,No,Yes,Urban  ,No,Yes
+Male,No,Yes,Rural,No,No
+Female,No,No,Rural,No,No
+Female,Yes,Yes,Rural,No,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,No,Yes,Rural,No,No
+Male,No,No,Urban,No,Yes
+Female,No,No,Rural,Yes,Yes
+Female,Yes,No,Rural,No,Yes
+Male,No,Yes,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,Yes,Yes,Rural,No,No
+Female,No,No,Rural,No,Yes
+Female,Yes,No,Rural,Yes,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,No,Urban  ,Yes,Yes
+Female,No,Yes,Urban  ,No,Yes
+Male,No,Yes,Rural,No,No
+Female,No,No,Rural,No,No
+Female,Yes,Yes,Rural,No,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,No,Yes,Rural,No,No
+Male,No,No,Urban,No,Yes
+Female,No,No,Rural,Yes,Yes
+Female,Yes,No,Rural,No,Yes
+Male,No,Yes,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,Yes,Yes,Rural,No,No
+Female,No,No,Rural,No,Yes
+Female,Yes,No,Rural,Yes,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,No,Urban  ,Yes,Yes
+Female,No,Yes,Urban  ,No,Yes
+Male,No,Yes,Rural,No,No
+Female,No,No,Rural,No,No
+Female,Yes,Yes,Rural,No,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,No,Yes,Rural,No,No
+Male,No,No,Urban,No,Yes
+Female,No,No,Rural,Yes,Yes
+Female,Yes,No,Rural,No,Yes
+Male,No,Yes,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,Yes,Yes,Rural,No,No
+Female,No,No,Rural,No,Yes
+Female,Yes,No,Rural,Yes,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,No,Urban  ,Yes,Yes
+Female,No,Yes,Urban  ,No,Yes
+Male,No,Yes,Rural,No,No
+Female,No,No,Rural,No,No
+Female,Yes,Yes,Rural,No,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,No,Yes,Rural,No,No
+Male,No,No,Urban,No,Yes
+Female,No,No,Rural,Yes,Yes
+Female,Yes,No,Rural,No,Yes
+Male,No,Yes,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,Yes,Yes,Rural,No,No
+Female,No,No,Rural,No,Yes
+Female,Yes,No,Rural,Yes,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,No,Urban  ,Yes,Yes
+Female,No,Yes,Urban  ,No,Yes
+Male,No,Yes,Rural,No,No
+Female,No,No,Rural,No,No
+Female,Yes,Yes,Rural,No,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,No,Yes,Rural,No,No
+Male,No,No,Urban,No,Yes
+Female,No,No,Rural,Yes,Yes
+Female,Yes,No,Rural,No,Yes
+Male,No,Yes,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,Yes,Yes,Rural,No,No
+Female,No,No,Rural,No,Yes
+Female,Yes,No,Rural,Yes,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,No,Urban  ,Yes,Yes
+Female,No,Yes,Urban  ,No,Yes
+Male,No,Yes,Rural,No,No
+Female,No,No,Rural,No,No
+Female,Yes,Yes,Rural,No,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,No,Yes,Rural,No,No
+Male,No,No,Urban,No,Yes
+Female,No,No,Rural,Yes,Yes
+Female,Yes,No,Rural,No,Yes
+Male,No,Yes,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,Yes,Yes,Rural,No,No
+Female,No,No,Rural,No,Yes
+Male,Yes,No,Rural,Yes,Yes
+Male,No,No,Urban  ,Yes,No
+Male,Yes,No,Urban  ,Yes,Yes
+Male,No,Yes,Urban  ,No,Yes
+Male,No,Yes,Rural,No,No
+Female,No,No,Rural,No,No
+Female,Yes,Yes,Rural,No,Yes
+Male,No,No,Urban  ,Yes,No
+Male,Yes,Yes,Urban  ,Yes,Yes
+Male,No,Yes,Rural,No,No
+Male,No,No,Urban,No,Yes
+Male,No,No,Rural,Yes,Yes
+Female,Yes,No,Rural,No,Yes
+Male,No,Yes,Urban  ,Yes,No
+Male,Yes,Yes,Urban  ,Yes,Yes
+Male,Yes,Yes,Urban  ,Yes,Yes
+Male,Yes,Yes,Rural,No,No
+Female,No,No,Rural,No,Yes
+Female,Yes,No,Rural,Yes,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,No,Urban  ,Yes,Yes
+Male,No,Yes,Urban  ,No,Yes
+Male,No,Yes,Rural,No,No
+Female,No,No,Rural,No,No
+Female,Yes,Yes,Rural,No,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,No,Yes,Rural,No,No
+Male,No,No,Urban,No,Yes
+Male,No,No,Rural,Yes,Yes
+Female,Yes,No,Rural,No,Yes
+Male,No,Yes,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,Yes,Yes,Rural,No,No
+Male,No,No,Rural,No,Yes
+Male,Yes,No,Rural,Yes,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,No,Urban  ,Yes,Yes
+Male,No,Yes,Urban  ,No,Yes
+Male,No,Yes,Rural,No,No
+Female,No,No,Rural,No,No
+Male,Yes,Yes,Rural,No,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,No,Yes,Rural,No,No
+Male,No,No,Urban,No,Yes
+Female,No,No,Rural,Yes,Yes
+Female,Yes,No,Rural,No,Yes
+Male,No,Yes,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,Yes,Yes,Rural,No,No
+Female,No,No,Rural,No,Yes
+Female,Yes,No,Rural,Yes,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,No,Urban  ,Yes,Yes
+Female,No,Yes,Urban  ,No,Yes
+Male,No,Yes,Rural,No,No
+Female,No,No,Rural,No,No
+Female,Yes,Yes,Rural,No,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,No,Yes,Rural,No,No
+Male,No,No,Urban,No,Yes
+Female,No,No,Rural,Yes,Yes
+Female,Yes,No,Rural,No,Yes
+Male,No,Yes,Urban  ,Yes,No
+Male,Yes,Yes,Urban  ,Yes,Yes
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,Yes,Yes,Rural,No,No
+Female,No,No,Rural,No,Yes
+Female,Yes,No,Rural,Yes,Yes
+Male,No,No,Urban  ,Yes,No
+Male,Yes,No,Urban  ,Yes,Yes
+Female,No,Yes,Urban  ,No,Yes
+Male,No,Yes,Rural,No,No
+Female,No,No,Rural,No,No
+Female,Yes,Yes,Rural,No,Yes
+Male,No,No,Urban  ,Yes,No
+Female,Yes,Yes,Urban  ,Yes,Yes
+Male,No,Yes,Rural,No,No
+Male,No,No,Urban,No,Yes
+Male,No,No,Rural,Yes,Yes
