@@ -3,6 +3,7 @@ package machinelearningproject;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
+import java.util.Set;
 
 public class dataAnalyser
 {
@@ -15,6 +16,8 @@ public class dataAnalyser
 
 
     Hashtable<String, Integer> aggTable = new Hashtable<>();
+    Hashtable<String, Double> probTable = new Hashtable<>();
+
 
     String concept = "";
     int lastColumn;
@@ -24,6 +27,28 @@ public class dataAnalyser
         dataSplit(inputData);
         setClasses();
         getAggregate();
+        generateProbabilities();
+
+    }
+
+    private void generateProbabilities()
+    {
+        for(String classifier: classes)
+        {
+            Double counter = Double.valueOf(0);
+            for(String row: trainingArray)
+            {
+                String[] rowSegments = row.split(",");
+                if(rowSegments[lastColumn].equals(classifier))
+                {
+                    counter ++;
+                }
+            }
+            probTable.put("P(" + classifier + ")",counter / trainingArray.size());
+        }
+
+
+
 
     }
 

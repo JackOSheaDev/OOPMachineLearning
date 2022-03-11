@@ -32,6 +32,7 @@ public class Main
         System.out.println(dataScan.trainingArray.size());
         System.out.println(dataScan.testingArray.size());
         System.out.println(dataScan.aggTable);
+        System.out.println(dataScan.probTable);
 
 
 
