@@ -5,6 +5,7 @@ import java.util.Hashtable;
 import java.util.List;
 import java.util.Set;
 
+
 public class dataAnalyser
 {
     List<String> inputDataArray = new ArrayList<>();
@@ -27,30 +28,88 @@ public class dataAnalyser
         dataSplit(inputData);
         setClasses();
         getAggregate();
-        generateProbabilities();
+        generatePriorProbabilities();
+        dataTest();
+
+
 
     }
 
-    private void generateProbabilities()
+    public boolean generateProbability(String [] args)
     {
-        for(String classifier: classes)
+
+        //TODO multiple values in key set
+        double divisor = probTable.get("P(Yes)") * probTable.get("P(No)");
+
+        double positive = 1;
+
+        for(int i=0;i<args.length-1;i++)
         {
-            Double counter = Double.valueOf(0);
-            for(String row: trainingArray)
-            {
-                String[] rowSegments = row.split(",");
-                if(rowSegments[lastColumn].equals(classifier))
-                {
-                    counter ++;
-                }
-            }
-            probTable.put("P(" + classifier + ")",counter / trainingArray.size());
+            positive = positive * aggTable.get(classes.get(0)+"_"+features.get(i)+"_"+args[i]) / trainingArray.size();
+        }
+
+        double negative = 1;
+
+        for(int i=0;i<args.length-1;i++)
+        {
+            negative = negative * aggTable.get(classes.get(1)+"_"+features.get(i)+"_"+args[i]) / trainingArray.size();
         }
 
 
-
+        return positive / divisor > negative / divisor;
 
     }
+
+    public void dataTest()
+    {
+        int incorrect = 0;
+        int correct = 0;
+        for(String row: testingArray)
+        {
+
+            List<String> args = new ArrayList<>();
+
+            for(String rowSlice : row.split(","))
+            {
+                args.add(rowSlice);
+            }
+
+            String final_element = args.get(args.size()-1);
+
+            args.remove(args.size()-1);
+
+            if(final_element.equals("Yes"))
+            {
+                if(generateProbability(args.toArray(new String[0])))
+                    correct++;
+                else
+                {
+                    incorrect++;
+                }
+            }
+            else if(final_element.equals("No"))
+            {
+                if(generateProbability(args.toArray(new String[0])))
+                    incorrect++;
+                else
+                {
+                    correct++;
+                }
+
+            }
+
+
+
+
+
+
+
+        }
+        System.out.println("RESULTS ARE CORRECT: " + correct + " INCORRECT: " + incorrect);
+    }
+
+
+
 
     private void getAggregate()
     {
@@ -70,6 +129,8 @@ public class dataAnalyser
                 {
                     aggTable.put(key, 1);
                 }
+
+
             }
 
 
@@ -88,8 +149,6 @@ public class dataAnalyser
             }
         }
     }
-
-
 
 
 
@@ -136,6 +195,23 @@ public class dataAnalyser
             counter++;
         }
 
+    }
+
+    private void generatePriorProbabilities()
+    {
+        for(String classifier: classes)
+        {
+            Double counter = (double) 0;
+            for(String row: trainingArray)
+            {
+                String[] rowSegments = row.split(",");
+                if(rowSegments[lastColumn].equals(classifier))
+                {
+                    counter ++;
+                }
+            }
+            probTable.put("P(" + classifier + ")",counter / trainingArray.size());
+        }
     }
 
 
