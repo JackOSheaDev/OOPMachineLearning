@@ -1,70 +1,116 @@
 package machinelearningproject;
 
-public class dataAnalyser {
+import java.util.ArrayList;
+import java.util.Hashtable;
+import java.util.List;
+
+public class dataAnalyser
+{
+    List<String> inputDataArray = new ArrayList<>();
+    List<String> trainingArray = new ArrayList<>();
+    List<String> testingArray = new ArrayList<>();
+
+    List<String> features = new ArrayList<>();
+    List<String> classes = new ArrayList<>();
 
 
-    String[] inputDataArray;
-    String[] features;
+    Hashtable<String, Integer> aggTable = new Hashtable<>();
 
-    Integer numFeatures = 0;
-
+    String concept = "";
+    int lastColumn;
 
     public dataAnalyser(String inputData)
     {
         dataSplit(inputData);
+        setClasses();
+        getAggregate();
 
     }
+
+    private void getAggregate()
+    {
+        for(String row: trainingArray)
+        {
+            String[] rowSegments = row.split(",");
+            for(int i=0;i<lastColumn;i++)
+            {
+
+                //TODO If errors revert this string
+                String key = rowSegments[lastColumn] + "_" + features.get(i) + "_" + rowSegments[i];
+                if(aggTable.containsKey(key))
+                {
+                    aggTable.replace(key, aggTable.get(key) + 1);
+                }
+                else
+                {
+                    aggTable.put(key, 1);
+                }
+            }
+
+
+        }
+
+    }
+
+    public void setClasses()
+    {
+        this.lastColumn = trainingArray.get(0).split(",").length - 1;
+        for(String row: trainingArray)
+        {
+            if (!classes.contains(row.split(",")[lastColumn]))
+            {
+                classes.add(row.split(",")[lastColumn]);
+            }
+        }
+    }
+
+
+
+
 
     public void dataSplit(String inputData)
     {
-        this.inputDataArray = inputData.split("\n");
-
-        setNumFeatures();
-        setFeatures();
-
-
-
-    }
-
-
-    private void setNumFeatures()
-    {
-        //System.out.println(inputDataArray[0]);
-
-        String[] labels = inputDataArray[0].split(",");
-
-
-        for (String label : labels) {
-            //System.out.println(label);
-            if (label.equals("Feature")) {
-                this.numFeatures++;
-            }
-        }
-
-
-    }
-    public int getNumFeatures()
-    {
-        System.out.println("The number of features in the dataset is: "+ numFeatures.toString());
-        return numFeatures;
-    }
-    public String[] getFeatures()
-    {
-
-        System.out.println("The features in the dataset are: ");
-        for(String feature: features)
+        for(String line: inputData.split("\n"))
         {
-            System.out.println(feature);
+            inputDataArray.add(line);
+
         }
-        System.out.println();
-        return features;
+        String features = inputDataArray.get(1);
+
+        for(String feature: features.split(","))
+        {
+            this.features.add(feature);
+        }
+        this.concept = this.features.get(this.features.size()-1);
+        this.features.remove(this.features.size()-1);
+
+
+        separateData(70);
+
+
+
     }
-
-
-
-    public void setFeatures()
+    public void separateData(int trainPercentage)
     {
-        this.features = inputDataArray[1].split(",");
+        int rows = inputDataArray.size();
+        int counter = 0;
+        //Evaluates to 70 percent
+        int trainingRows = (int)((float) rows/100 * trainPercentage);
+        System.out.println("There are " + trainingRows + " rows in the training dataset");
+
+
+        while(counter < trainingRows)
+        {
+            trainingArray.add(inputDataArray.get(counter+2));
+            counter++;
+        }
+        while(counter < rows)
+        {
+
+            testingArray.add(inputDataArray.get(counter));
+            counter++;
+        }
+
     }
 
 
