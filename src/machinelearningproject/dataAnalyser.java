@@ -1,13 +1,14 @@
 package machinelearningproject;
 
+//Array
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
-import java.util.Set;
 
 
 public class dataAnalyser
 {
+
     List<String> inputDataArray = new ArrayList<>();
     List<String> trainingArray = new ArrayList<>();
     List<String> testingArray = new ArrayList<>();
@@ -202,12 +203,11 @@ public class dataAnalyser
         for(String classifier: classes)
         {
             Double counter = (double) 0;
-            for(String row: trainingArray)
-            {
+            for (int i = 0; i < trainingArray.size(); i++) {
+                String row = trainingArray.get(i);
                 String[] rowSegments = row.split(",");
-                if(rowSegments[lastColumn].equals(classifier))
-                {
-                    counter ++;
+                if (rowSegments[lastColumn].equals(classifier)) {
+                    counter++;
                 }
             }
             probTable.put("P(" + classifier + ")",counter / trainingArray.size());
