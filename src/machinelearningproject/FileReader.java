@@ -1,59 +1,53 @@
 package machinelearningproject;
-/*
-    Author:
-        Jack O'Shea
-    Date:
-        3/10/2022
-    Purpose:
-        fileReader is an abstract class which is used to simulate a file read for different types of files.
 
-    Attributes:
-        fileName is the name of the file which will be used by the fileReader.
-        fileScanner is a scanner object which will read text from the file.
-        fileObject is the file which will be read by the fileReader.
-
-    Methods:
-        createFileObject will create a file object and check if the file exists. If it exists a scanner is created.
-        readLine will read one line of the file, it will not read a line if the scanner is not working.
-        readFile will reset the scanner, scan the whole file and return the result as a string.
-        closeScanner will stop the scanner, once it is no longer needed.
-        resetScanner is used to scan a new file or restart the scanner at the beginning of the file.
-        getFileName will return the file name if it exists.
-        setFileName is an abstract method implemented by children classes.
-
-
-
- */
-
-//Import file and scanner library which will be used by the fileReader class.
+//Import file and scanner library which will be used by the FileReader class.
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-//An abstract parent class which serves as the template for the CSVReader
-abstract class fileReader
+/**
+ * This is an abstract class named FileReader which I use to take a string input as a file path,
+ * and perform methods such as reading a line from the file or reading the whole file.
+ *
+ * @author Jack O'Shea
+ * @version 1.0
+ * @since 13/02/2022
+ *
+ */
+abstract class FileReader
 {
-    // A String input value which is the path to the file
+    /**
+     * The name of the file which will be used by methods within the program to create a file object and return the
+     * content of the file
+     */
     protected String fileName = "";
 
-    //A Scanner which will be used to read data from the file.
+    /**
+     * A scanner object which will be used to read text from the file object.
+     */
     protected Scanner fileScanner;
 
-    //A File object which will be used to store the file, so it can be read by scanner.
+    /**
+     * The file object which will be created by the class.
+     */
     protected File fileObject;
 
 
-
-
+    /**
+     * <p>This method is used to create a file object to be read by the FileReader. </p>
+     */
     protected void createFileObj() {
-        //Creates a file object and checks if the file exists.
-        fileObject = new File(fileName);
+        //Creates a file object.
+        fileObject = new File(getFileName());
+
+        //Verifies the file exists.
         if(fileObject.exists())
         {
             System.out.println("> File exists and has been located");
             //Only starts the scanner is the file exists.
             resetScanner();
         }
+        //If the file doesn't exist.
         else
         {
             System.out.println("> File does not exist and cannot be located");
@@ -61,9 +55,13 @@ abstract class fileReader
 
     }
 
-    //A method which returns an individual line from a file which is specified.
+    /**
+     * <p>This method is used to read a single line from the file. </p>
+     * @return the next line in the file or null if there isn't one
+     */
     public String readLine()
     {
+        //Only return the next line if there is a next line.
         try
         {
             //Returns a line if there is one.
@@ -82,7 +80,10 @@ abstract class fileReader
         return null;
     }
 
-    //A method which returns the whole file as a string seperated by newline characters.
+    /**
+     * <p>This method is used the whole file into a string variable.</p>
+     * @return the contents of the file as a single string.
+     */
     public String readFile()
     {
         //Empty String variable
@@ -112,7 +113,9 @@ abstract class fileReader
 
     }
 
-    //Turns the scanner off if a scanner is active otherwise says there is no scanner in action.
+    /**
+     * <p>This method is used to turn of the scanner once the file's contents have been read.</p>
+     */
     protected void closeScanner()
     {
         //Closes the scanner and prints to output.
@@ -130,18 +133,24 @@ abstract class fileReader
 
     }
 
-    //Restarts the scanner or initialises it, can be used by end user.s
+    /**
+     * <p>This method is used to turn on a new scanner and have it go back to the first line. </p>
+     *
+     */
     public void resetScanner()
     {
+        //Trys to make a scanner if the file exists.
         try
         {
             //Start the scanner to view the contents of a file
             fileScanner = new Scanner(fileObject);
         }
+        //If the file is not found.
         catch(FileNotFoundException e)
         {
             System.out.println(e + " File cannot be found or does not exist.");
         }
+        //If no file path is specified.
         catch(NullPointerException e)
         {
             System.out.println("There is no Scanner currently in operation");
@@ -149,13 +158,17 @@ abstract class fileReader
     }
 
 
-    //getFileName is a method that returns the fileName Variable.
+    /**
+     * <p>This method is used to get the name of the file </p>
+     * @return the name of the file.
+     */
     public String getFileName()
     {
         //Checks if the fileName is blank
         if(fileName.isBlank())
         {
-            return "> No file name is stored";
+            System.out.println("> No file name is stored");
+            return null;
         }
         //If there is a filename it is returned.
         else
@@ -164,6 +177,9 @@ abstract class fileReader
         }
     }
 
-    //An abstract method which will be implemented by the CSVReader
-    abstract public void setFileName(String filename);
+    /**
+     * <p>This is an abstract method used by children classes to implement functionality such as file type verification.</p>
+     * @param fileName name of the file
+     */
+    abstract public void setFileName(String fileName);
 }

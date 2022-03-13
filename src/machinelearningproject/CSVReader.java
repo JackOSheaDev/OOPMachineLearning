@@ -1,25 +1,19 @@
 package machinelearningproject;
-/*
-    Author:
-        Jack O'Shea
-    Date:
-        3/10/2022
-    Purpose:
-        The purpose of CSV reader is to read a csv file and extends the fileReader class.
-    Attributes:
-        All attributes are extended from fileReader.
-    Methods:
-        Constructor sets the file name.
-        setFileName checks if the file is in CSV format and creates the file object
 
+/**
+ * This is a class which extends FileReader,
+ * and implements a constructor and overrides an abstract method.
+ * @author Jack O'Shea
+ * @version 1.0
+ * @since 13/02/2022
  */
-
-
-//Class which extends the fileReader class and implements a method to verify the file type before setting it.
-public class CSVReader extends fileReader
+public class CSVReader extends FileReader
 {
 
-    //Constructor which initialises the CSVReader object with the name and creates the file.
+    /**
+     * <p>This is the constructor used to initialise the file with its name. </p>
+     * @param fileName The name of the file to be read.
+     */
     public CSVReader(String fileName)
     {
         //Calls method to set the name to whatever is passed.
@@ -27,9 +21,13 @@ public class CSVReader extends fileReader
     }
 
 
-    //Implemented version of setFilename which checks the file extension, it also recreates the fill object.
+
+    /**
+     * <p>This method is used to set the filename and verify the file extension.</p>
+     */
     @Override
     public void setFileName(String filename) {
+        //Ensures the file type is csv.
         if(!filename.endsWith(".csv"))
         {
             //If the file type is incorrect.
@@ -41,6 +39,7 @@ public class CSVReader extends fileReader
             //If the file type is correct the object is created.
             System.out.println("Correct file type");
             this.fileName = filename;
+            //Creates the file object.
             createFileObj();
         }
     }
