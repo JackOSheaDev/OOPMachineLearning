@@ -1,36 +1,56 @@
 package machinelearningproject;
 
+//Import data structures which are used to store data throughout the program.
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
 
-public class NaiveBayes extends dataAnalyser
+/**
+ * This is a class that is used to perform the Naive Bayes Machine Learning algorithm on a set of
+ * data to predict the result of combinations of features.
+ *
+ * @author Jack O'Shea
+ * @version 1.0
+ * @since 13/02/2022
+ *
+ */
+public class NaiveBayes extends DataAnalyser
 {
 
+    /**
+     * Aggregate table stores all the possible combinations of data.
+     */
     public Hashtable<String, Integer> aggTable = new Hashtable<>();
+    /**
+     * The probability table stores the prior probabilities for calculations.
+     */
     public Hashtable<String, Double> probTable = new Hashtable<>();
 
+    /**
+     * <p>This method is the constructor for the Naive Bayes class which extends DataAnalyser
+     * using the call to super as well as implementing further functionality.</p>
+     * @param inputData The string of input data which must be passed to super.
+     */
     public NaiveBayes(String inputData) {
+        //Call to super to extend Data Analyser.
         super(inputData);
 
-        //Naive Bayes
+        //Call to aggregate function to get the aggregate table.
         getAggregate();
 
 
-        //Naive Bayes
+        //Call to generate the prior possibilities used for calculations.
         generatePriorProbabilities();
 
-        /*
-        String[] arguments = {"Male","No","No","Rural","No"};
-        System.out.println("Value is : " + generateProbability(arguments));
-        */
-
-
-        //Naive_bayes
+        //Tests the accuracy of the machine learning algorithm using the testing data.
         dataTest();
     }
 
-    //Naive Bayes
+    /**
+     * <p>This method is used to perform methods which analyse the data. </p>
+     * @param args The arguments passed to the probability function to get the probability of
+     *             a set of arguments.
+     */
     public String generateProbability(String [] args)
     {
         //This segment of code gets the probability for the naive bayes theorem.
@@ -39,37 +59,39 @@ public class NaiveBayes extends dataAnalyser
         //For every string in the classes' dictionary,
         for(String classifier : classes)
         {
-            //THe divisor is multiplied by the probability.
+            //The divisor is multiplied by the probability.
             divisor = divisor * probTable.get("P("+classifier+")");
 
         }
 
         
-        
+        //Array list used to house the probabilities calculated.
         List<Double> values = new ArrayList<>();
-        
+
+        //For each classifier in the class list.
         for(String classifier: classes)
         {
+            //Calculates the numerator by multiplying the individual probabilities.
             double numerator = 1;
             for(int i=0;i<args.length-1;i++)
             {
 
-
+                //If the value isn't present in the table it is set to 0.
                 aggTable.putIfAbsent(classifier + "_" + features.get(i) + "_" + args[i], 0);
+                //Multiplies the numerator by a value in the aggTable / the size of the array as specified by naive bayes.
                 numerator = numerator * aggTable.get(classifier+"_"+features.get(i)+"_"+args[i]) / trainingArray.size();
 
-
-
-
             }
+            //Adds the value to numerator.
             values.add(numerator);
         }
 
+        //Variables to store max_index and max_value.
         int max_index = 0;
         double max_value = 0;
 
 
-
+        //Gets the highest probability.
         for(int i=0;i<values.size();i++)
         {
             if(values.get(i) > max_value)
@@ -79,10 +101,10 @@ public class NaiveBayes extends dataAnalyser
             }
         }
 
-
+        //Returns a classifier such as Yes or no by specifying the index.
         return getClasses().get(max_index);
     }
-    //Naive Bayes
+
 
     public void dataTest()
     {
@@ -130,7 +152,10 @@ public class NaiveBayes extends dataAnalyser
 
 
 
-    //Creates a table of all the probabilities seperated by class.
+    /**
+     * <p>This method is used create a table of all the possibilities </p>
+     *
+     */
     private void getAggregate()
     {
         //For each row in the training array.
@@ -143,7 +168,7 @@ public class NaiveBayes extends dataAnalyser
             for(int i=0;i<lastColumn;i++)
             {
 
-                //TODO If errors revert this string
+
                 //Creates a key for the aggregate table containing the classifier, the feature and the result.
                 String key = rowSegments[lastColumn] + "_" + features.get(i) + "_" + rowSegments[i];
 
@@ -168,20 +193,21 @@ public class NaiveBayes extends dataAnalyser
 
     }
 
-    //Gets the probabilities of A and B.
+    /**
+     * <p>This method is used to get the prior possibilites IE. P(A) and P(B)..</p>
+     *
+     */
     private void generatePriorProbabilities()
     {
         //For each classifier in the list.
         for(String classifier: classes)
         {
             //Initialise a counter to 0
-            Double counter = (double) 0;
+            double counter =  0;
 
             //For each element in the training list array.
-            for (int i = 0; i < trainingArray.size(); i++) {
+            for (String row : trainingArray) {
                 //The row is the current element in the for loop.
-                String row = trainingArray.get(i);
-
                 //The row is segmented into sections.
                 String[] rowSegments = row.split(",");
 
@@ -195,9 +221,4 @@ public class NaiveBayes extends dataAnalyser
             probTable.put("P(" + classifier + ")",counter / trainingArray.size());
         }
     }
-
-
-
-
-
 }
