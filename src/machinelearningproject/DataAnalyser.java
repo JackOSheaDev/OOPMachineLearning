@@ -1,65 +1,72 @@
 package machinelearningproject;
-/*
-    Author:
-        Jack O'Shea
-
-    Date:
-       3/12/2022
-
-    Purpose:
-        This class takes in a string input and performs methods which separate it out into a format easier
-        for data manipulation by doing actions such as getting the concept of the data sheet,
-        finding how many columns there are, finding the features and classes of the data and printing out the data.
-
-    Attributes:
-        concept is the purpose of the machine learning.
-        lastColumn is the index of the final column of the data.
-        inputData is the string inputted to the constructor.
-        inputDataArray is an array version of inputData.
-        trainingArray is a subset of the inputDataArray used for ML.
-        testingArray is a subset of the inputDataArray used for testing the ML algorithm.
-        features is all the features of the dataset.
-        classes is the possible results of the data. IE. Yes or No to being an entrepreneur.
-    Methods:
-        data-examiner splits the data into a simpler form.
-        separateData creates the test and train set.
-        printalldata returns all the variables of the class.
-
-
-
- */
-
 //List and ArrayList are used for dynamic storage of data.
 import java.util.ArrayList;
 import java.util.List;
 
-//Data analyser which performs functions to separate a CSV file into rows, features and classes.
-public class dataAnalyser
-{
 
-    //Variables used by the program.
-    String concept = "";
-    int lastColumn;
-    String inputData;
+
+
+
+/**
+ * This is a class that is used to perform methods which separates the data of a CSV file into
+ * easier variables to manipulate such as columns, features and rows.
+ *
+ * @author Jack O'Shea
+ * @version 1.0
+ * @since 13/02/2022
+ *
+ */
+public class DataAnalyser
+{
+    //Variables:
+    /**
+     * The concept of the data analysis, such as will this person become an entrepreneur.
+     */
+    private String concept = "";
+
+    /**
+     * The index of the last column of the dataset which stores the classification of the data.
+     */
+    protected int lastColumn;
+
+    /**
+     * The inputted string which is read and analysed by the class.
+     */
+    protected String inputData;
 
     //Input data array and its subsets.
-    List<String> inputDataArray = new ArrayList<>();
-    List<String> trainingArray = new ArrayList<>();
-    List<String> testingArray = new ArrayList<>();
+
+    /**
+     * The inputted string in an array form.
+     */
+    private List<String> inputDataArray = new ArrayList<>();
+    /**
+     * The inputted string in an array form which will be used for training.
+     */
+    protected List<String> trainingArray = new ArrayList<>();
+    /**
+     * The inputted string in an array form which will be used for testing.
+     */
+    protected List<String> testingArray = new ArrayList<>();
 
     //The features and classes of the dataset.
-    List<String> features = new ArrayList<>();
-    List<String> classes = new ArrayList<>();
+    /**
+     * The features of the dataset we are analysing.
+     */
+    protected List<String> features = new ArrayList<>();
+    /**
+     * The classification of the dataset.
+     */
+    protected List<String> classes = new ArrayList<>();
 
-
-    public dataAnalyser(String inputData)
+    /**
+     * <p>This method is the constructor for the DataAnalyser class and is used to read in an input
+     * string and manipulate it into variables which are easier to use. </p>
+     */
+    public DataAnalyser(String inputData)
     {
 
-        /*
-        To reduce the complexity of this program and to make it easier to error test, i seperated the
-        data analysis features and the machine learning and probability features into two separate classes,
-        with NaiveBayes being an implementation of the dataAnalyser
-        */
+
         System.out.println("\nScanning the data and beginning data preparation");
         System.out.println("=================================================\n");
 
@@ -68,7 +75,7 @@ public class dataAnalyser
 
 
         //Examines the data for all the essential components.
-        dataExaminer(inputData);
+        dataExaminer(getInputData());
 
 
         //analyser
@@ -77,7 +84,10 @@ public class dataAnalyser
     }
 
     //MAIN CORE FUNCTIONS:
-    //Examines the data.
+    /**
+     * <p>This method is used to perform methods which analyse the data. </p>
+     * @param inputData The data inputted to the examiner in the form of a string.
+     */
     public void dataExaminer(String inputData)
     {
         //Separates the input string into an array of strings for easier analysis.
@@ -98,7 +108,10 @@ public class dataAnalyser
 
 
     }
-    //Separates the data into two string lists for training and testing.
+    /**
+     * <p>This method is used to separate the data into a training and testing set. </p>
+     * @param trainPercentage The percentage of the total dataset used for training.
+     */
     public void separateData(int trainPercentage)
     {
         //The number of rows is the number of elements in the inputDataArray
@@ -138,20 +151,14 @@ public class dataAnalyser
         }
 
     }
-    //Prints all the data out.
+
+    /**
+     * <p>This method is print all the data of the analyser to standard output. </p>S
+     */
     public void printAllData()
     {
         System.out.println("\nInput Data Array");
         System.out.println("=================\n");
-
-        /*
-        for(String row: getInputDataArray())
-
-        {
-            System.out.println(row);
-        }
-        */
-
 
         System.out.println("\n Features");
         System.out.println("=========");
@@ -177,8 +184,12 @@ public class dataAnalyser
     }
 
 
+
     //SETTERS
-    //Turns the input string into an array.
+
+    /**
+     * <p>This method is used to turn the input string into an array.</p>
+     */
     public void setInputDataArray()
     {
         //Separates the input data into an array of strings.
@@ -189,7 +200,9 @@ public class dataAnalyser
 
         }
     }
-    //Sets the feature array.
+    /**
+     * <p>This method is used to set the features of the dataset. </p>
+     */
     public void setFeatures()
     {
         //The 2nd line in the array contains all the features of the dataset.
@@ -202,7 +215,10 @@ public class dataAnalyser
             this.features.add(feature);
         }
     }
-    //Sets the concept array.
+
+    /**
+     * <p>This method is used to set the concept of the dataset. </p>
+     */
     public void setConcept()
     {
         //The concept of the data is the question being asked. It is the last feature.
@@ -211,7 +227,10 @@ public class dataAnalyser
         //The concept is removed from the features set, so it only has features.
         this.features.remove(this.features.size()-1);
     }
-    //Sets the input data string.
+    /**
+     * <p>This method is used to set the input data of the dataset. </p>
+     * @param inputData The string you are setting as inputData.
+     */
     public void setInputData(String inputData) {
         //Checks if the input string is blank:
         if(!inputData.isBlank())
@@ -226,7 +245,9 @@ public class dataAnalyser
 
 
     }
-    //Sets the classes of the data.
+    /**
+     * <p>This method is used to set the classes of the dataset. </p>
+     */
     public void setClasses()
     {
         //The classes are the possible answers to the concept such as Yes or No in this case.
@@ -244,26 +265,38 @@ public class dataAnalyser
         }
     }
 
+
+
     //GETTERS
-    //Gets the input data array
+    /**
+     * <p>This method is used to return the inputDataArray of the dataset. </p>
+     * @return inputDataArray the data stored in inputDataArray.
+     */
     public List<String> getInputDataArray()
     {
-
-
         return inputDataArray;
     }
-    //Gets all the features.
+
+    /**
+     * <p>This method is used to get the features of the dataset. </p>
+     */
     public List<String> getFeatures()
     {
 
         return features;
     }
-    //Gets the concept of the data.
+
+    /**
+     * <p>This method is used to get the concept of the dataset. </p>
+     */
     public String getConcept() {
 
         return concept;
     }
-    //Gets the input data string.
+
+    /**
+     * <p>This method is used to get the inputData as a string of the dataset. </p>
+     */
     public String getInputData() {
         System.out.println("Inputted Data");
         System.out.println("==============");
@@ -271,7 +304,9 @@ public class dataAnalyser
         System.out.println(inputData);
         return inputData;
     }
-    //Gets the classes of the data.
+    /**
+     * <p>This method is used to get the classes of the dataset. </p>
+     */
     public List<String> getClasses() {
 
         return classes;
