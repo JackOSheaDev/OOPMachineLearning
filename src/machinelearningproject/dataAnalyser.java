@@ -141,11 +141,39 @@ public class dataAnalyser
     //Prints all the data out.
     public void printAllData()
     {
-        //getInputDataArray();
-        getFeatures();
-        getConcept();
+        System.out.println("\nInput Data Array");
+        System.out.println("=================\n");
 
-        getClasses();
+        /*
+        for(String row: getInputDataArray())
+
+        {
+            System.out.println(row);
+        }
+        */
+
+
+        System.out.println("\n Features");
+        System.out.println("=========");
+
+        for(String feature: getFeatures())
+        {
+            System.out.println(feature);
+        }
+
+        System.out.println("\nConcept of the dataset");
+        System.out.println("======================");
+        System.out.println(getConcept());
+
+
+
+        System.out.println("\nClasses of the data");
+        System.out.println("==============");
+
+        for(String classID : getClasses())
+        {
+            System.out.println(classID);
+        }
     }
 
 
@@ -221,32 +249,18 @@ public class dataAnalyser
     public List<String> getInputDataArray()
     {
 
-        System.out.println("Input Data Array");
-        System.out.println("=================");
 
-        for(String row: inputDataArray)
-        {
-            System.out.println(row);
-        }
         return inputDataArray;
     }
     //Gets all the features.
     public List<String> getFeatures()
     {
-        System.out.println("Features");
-        System.out.println("=========");
 
-        for(String feature: features)
-        {
-            System.out.println(feature);
-        }
         return features;
     }
     //Gets the concept of the data.
     public String getConcept() {
-        System.out.println("Concept of the dataset");
-        System.out.println("======================");
-        System.out.println(concept);
+
         return concept;
     }
     //Gets the input data string.
@@ -259,13 +273,7 @@ public class dataAnalyser
     }
     //Gets the classes of the data.
     public List<String> getClasses() {
-        System.out.println("Classes of the data");
-        System.out.println("==============");
 
-        for(String classID : classes)
-        {
-            System.out.println(classID);
-        }
         return classes;
     }
 

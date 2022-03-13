@@ -20,13 +20,18 @@ public class NaiveBayes extends dataAnalyser
         //Naive Bayes
         generatePriorProbabilities();
 
+        /*
+        String[] arguments = {"Male","No","No","Rural","No"};
+        System.out.println("Value is : " + generateProbability(arguments));
+        */
+
 
         //Naive_bayes
         dataTest();
     }
 
     //Naive Bayes
-    public boolean generateProbability(String [] args)
+    public String generateProbability(String [] args)
     {
         //This segment of code gets the probability for the naive bayes theorem.
         //Initial value of divisor is 1.
@@ -39,25 +44,46 @@ public class NaiveBayes extends dataAnalyser
 
         }
 
-        double positive = 1;
-
-        for(int i=0;i<args.length-1;i++)
+        
+        
+        List<Double> values = new ArrayList<>();
+        
+        for(String classifier: classes)
         {
-            positive = positive * aggTable.get(classes.get(0)+"_"+features.get(i)+"_"+args[i]) / trainingArray.size();
+            double numerator = 1;
+            for(int i=0;i<args.length-1;i++)
+            {
+
+
+                aggTable.putIfAbsent(classifier + "_" + features.get(i) + "_" + args[i], 0);
+                numerator = numerator * aggTable.get(classifier+"_"+features.get(i)+"_"+args[i]) / trainingArray.size();
+
+
+
+
+            }
+            values.add(numerator);
         }
 
-        double negative = 1;
+        int max_index = 0;
+        double max_value = 0;
 
-        for(int i=0;i<args.length-1;i++)
+
+
+        for(int i=0;i<values.size();i++)
         {
-            negative = negative * aggTable.get(classes.get(1)+"_"+features.get(i)+"_"+args[i]) / trainingArray.size();
+            if(values.get(i) > max_value)
+            {
+                max_value = values.get(i);
+                max_index = i;
+            }
         }
 
 
-        return positive / divisor > negative / divisor;
-
+        return getClasses().get(max_index);
     }
     //Naive Bayes
+
     public void dataTest()
     {
         int incorrect = 0;
@@ -75,26 +101,19 @@ public class NaiveBayes extends dataAnalyser
             String final_element = args.get(args.size()-1);
 
             args.remove(args.size()-1);
-            //TODO change here
-            if(final_element.equals("Yes"))
-            {
-                if(generateProbability(args.toArray(new String[0])))
-                    correct++;
-                else
-                {
-                    incorrect++;
-                }
-            }
-            else if(final_element.equals("No"))
-            {
-                if(generateProbability(args.toArray(new String[0])))
-                    incorrect++;
-                else
-                {
-                    correct++;
-                }
 
+            if(final_element.equals(generateProbability(args.toArray(new String[0]))))
+            {
+                correct++;
             }
+            else
+            {
+                incorrect++;
+            }
+
+
+
+
 
 
 
@@ -104,7 +123,11 @@ public class NaiveBayes extends dataAnalyser
 
         }
         System.out.println("RESULTS ARE CORRECT: " + correct + " INCORRECT: " + incorrect);
+        System.out.println("FINAL ACCURACY: " + (double) correct / (double) testingArray.size());
+
     }
+
+
 
 
     //Creates a table of all the probabilities seperated by class.

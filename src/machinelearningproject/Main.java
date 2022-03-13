@@ -10,8 +10,10 @@ public class Main
         System.out.println("======================================================\n");
 
         //Read CSV:
-        CSVReader mlFile = new CSVReader("MLdata.csv");
-        //CSVReader mlFile = new CSVReader("superhero.csv");
+        CSVReader mlFile = new CSVReader("superhero.csv");
+        //CSVReader mlFile = new CSVReader("MLdata.csv");
+
+
 
 
         //Return CSV contents.
@@ -34,7 +36,7 @@ public class Main
         System.out.println(( dataScan).probTable);
 
 
-        String[] arguments = {"Male","No","No","Rural","No"};
+        //String[] arguments = {"Male","No","No","Rural","No"};
         //System.out.println(dataScan.generateProbability("Yes",arguments));
         //System.out.println(dataScan.generateProbability(arguments));
 

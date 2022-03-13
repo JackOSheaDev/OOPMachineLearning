@@ -1,0 +1,455 @@
+Feature,Feature,Feature,Feature,Feature,Label
+Gender,Eye color,Race,Hair,Publisher,Alignment
+Male,yellow,Human,No Hair,Marvel Comics,good
+Male,blue,Icthyo Sapien,No Hair,Dark Horse Comics,good
+Male,blue,Ungaran,No Hair,DC Comics,good
+Male,green,Human / Radiation,No Hair,Marvel Comics,bad
+Male,blue,Cosmic Entity,Black,Marvel Comics,bad
+Male,blue,Human,No Hair,Marvel Comics,bad
+Male,blue,-,Blond,NBC - Heroes,good
+Male,blue,Human,Blond,DC Comics,good
+Female,blue,-,Blond,Marvel Comics,good
+Male,brown,Human,Brown,Marvel Comics,good
+Male,-,-,-,Marvel Comics,good
+Male,blue,-,White,Marvel Comics,bad
+Male,brown,Cyborg,Black,Marvel Comics,bad
+Male,blue,-,Blond,DC Comics,good
+Male,-,Human,-,Wildstorm,bad
+Male,-,-,-,NBC - Heroes,good
+Male,blue,Human,Black,DC Comics,good
+Male,-,Xenomorph XX121,No Hair,Dark Horse Comics,bad
+Male,-,-,-,Wildstorm,good
+Male,red,Android,-,DC Comics,bad
+Male,brown,Human,Black,Marvel Comics,bad
+Male,-,-,-,NBC - Heroes,good
+Male,blue,-,Blond,Marvel Comics,good
+Male,-,Vampire,-,Dark Horse Comics,good
+Female,yellow,Mutant,Black,Marvel Comics,good
+Female,brown,-,Black,Marvel Comics,good
+Female,-,-,-,Image Comics,bad
+Male,blue,Human,Blond,DC Comics,good
+Male,green,-,No Hair,Marvel Comics,bad
+Male,blue,Human,Blond,Marvel Comics,good
+Male,blue,Human,Blond,Marvel Comics,good
+Male,yellow,God / Eternal,No Hair,DC Comics,bad
+Male,-,-,-,Image Comics,bad
+Male,blue,Symbiote,Blond,Marvel Comics,-
+Male,red,Mutant,Black,Marvel Comics,bad
+Male,blue,-,Blond,DC Comics,good
+Male,blue,Atlantean,Black,DC Comics,good
+Male,blue,Atlantean,Blond,DC Comics,good
+Female,blue,Human,Blond,Marvel Comics,good
+Male,blue,Mutant,Blond,Marvel Comics,good
+Female,violet,-,Purple,Marvel Comics,bad
+Female,white,Alien,Orange,Marvel Comics,good
+Male,brown,-,Brown,Marvel Comics,good
+Female,purple,-,Pink,Marvel Comics,good
+Female,black,-,Black,Marvel Comics,good
+Male,-,Human,-,DC Comics,good
+Male,brown,Mutant,Red,Marvel Comics,good
+Male,blue,God / Eternal,Brown,DC Comics,bad
+Male,blue,-,Red,DC Comics,good
+Male,-,-,-,DC Comics,good
+Female,black,-,Black,DC Comics,good
+Male,brown,Human,Auburn,DC Comics,good
+Male,-,-,Red,DC Comics,good
+Male,brown,-,Black,DC Comics,good
+Female,blue,Mutant,Black,Marvel Comics,good
+Male,yellow,Neyaphem,Black,Marvel Comics,bad
+Male,brown,Human,Black,DC Comics,good
+Male,-,-,-,DC Comics,good
+Male,-,Human,-,DC Comics,bad
+Male,green,Human,Strawberry Blond,Marvel Comics,good
+Male,brown,-,Black,Marvel Comics,good
+Female,-,-,-,DC Comics,good
+Female,green,Human,Red,DC Comics,good
+Female,-,-,-,DC Comics,good
+Female,green,Human,Black,DC Comics,good
+Female,-,-,-,DC Comics,good
+Female,blue,-,Blond,DC Comics,good
+Male,blue,Human,black,DC Comics,good
+Male,blue,Human,Black,DC Comics,good
+Male,blue,Human,Black,DC Comics,good
+Male,brown,-,Black,Marvel Comics,good
+Female,green,Human,Red,DC Comics,good
+Male,black,-,White,Marvel Comics,good
+Male,blue,Mutant,Blue,Marvel Comics,good
+Male,green,Human,Green,DC Comics,good
+Male,-,-,-,Marvel Comics,bad
+Male,-,-,-,DC Comics,good
+Male,-,-,No Hair,Marvel Comics,good
+Male,-,God / Eternal,-,Marvel Comics,good
+Female,blue,New God,Black,DC Comics,bad
+Male,-,-,-,Icon Comics,good
+Male,blue,-,Brown,Marvel Comics,bad
+Male,-,Alpha,-,SyFy,good
+Male,-,-,-,Image Comics,bad
+Female,blue,-,Blond,Marvel Comics,good
+-,-,-,-,Marvel Comics,good
+Male,-,Human,-,Marvel Comics,bad
+Male,-,Human,-,Marvel Comics,bad
+Male,-,God / Eternal,-,Hanna-Barbera,good
+Male,brown,Mutant,No Hair,Marvel Comics,good
+Male,black,Bizarro,Black,DC Comics,neutral
+Male,red,-,Black,Marvel Comics,bad
+Male,brown,-,Black,DC Comics,bad
+Male,blue,Inhuman,Black,Marvel Comics,good
+Female,blue,Human,Blond,DC Comics,good
+Female,blue,Metahuman,Blond,DC Comics,good
+Female,green,Human,Blond,Marvel Comics,good
+Male,-,God / Eternal,-,DC Comics,neutral
+Male,-,-,-,Marvel Comics,good
+Male,brown,Human,Brown,Marvel Comics,good
+Male,brown,-,No Hair,DC Comics,good
+Female,green,-,Black,Marvel Comics,bad
+Male,black,Human,No Hair,DC Comics,bad
+Male,brown,Human,Black,Marvel Comics,good
+Female,green,Human,Auburn,Marvel Comics,good
+Female,blue,-,Blond,Marvel Comics,good
+Male,red,Demon,White,Marvel Comics,bad
+Male,blue,-,Black,Marvel Comics,bad
+Male,brown,Vampire,Black,Marvel Comics,good
+-,black,-,No Hair,Marvel Comics,good
+Female,-,-,-,Marvel Comics,good
+Female,green,Mutant,Magenta,Marvel Comics,good
+Male,-,-,-,Marvel Comics,bad
+Male,-,-,Brown,Marvel Comics,bad
+Male,brown,-,Brown,Marvel Comics,bad
+Male,brown,-,Brown,,bad
+Female,blue,Human,Brown,Marvel Comics,bad
+Male,black,Mutant,No Hair,Marvel Comics,good
+Male,white,-,No Hair,Marvel Comics,bad
+Male,blue,-,Brown,DC Comics,good
+Male,-,-,-,DC Comics,good
+Male,blue,-,Brown,DC Comics,good
+Male,brown,Human,Black,DC Comics,good
+Male,brown,Human / Clone,Black,George Lucas,bad
+Male,-,-,-,Marvel Comics,good
+Female,-,-,-,Image Comics,bad
+Female,blue,Mutant,Blond,Marvel Comics,good
+Female,-,-,-,Marvel Comics,good
+Male,blue,Human,Blond,DC Comics,good
+Male,-,-,-,Marvel Comics,good
+-,blue,-,Blond,Marvel Comics,good
+-,brown,-,Brown / Black,Marvel Comics,good
+Male,green,Android,No Hair,DC Comics,bad
+Male,green,-,Blond,DC Comics,good
+Male,brown,Human,Brown / White,Marvel Comics,good
+Female,green,Human,Blond,Dark Horse Comics,good
+Male,blue,Human,blond,Marvel Comics,bad
+Female,brown,Human,Black,DC Comics,good
+Male,-,-,-,Marvel Comics,good
+Male,-,Human,-,DC Comics,good
+Male,blue,Mutant,White,Marvel Comics,good
+Female,blue,-,Black,Marvel Comics,bad
+Male,-,Alpha,-,SyFy,good
+Male,blue,-,Blond,Marvel Comics,good
+Male,blue,Human,blond,Marvel Comics,good
+Male,blue,Human / Radiation,Silver,DC Comics,good
+Male,blue,Human,Blond,Marvel Comics,good
+Male,brown,Human,Brown,DC Comics,neutral
+Male,blue,-,Brown,Team Epic TV,good
+Male,-,Human,Black,South Park,good
+Male,blue,-,Blond,Marvel Comics,good
+Female,blue,Human-Kree,Blond,Marvel Comics,good
+Male,blue,Human,Black,DC Comics,good
+Male,blue,Human,Black,DC Comics,good
+Male,-,Human,-,Dark Horse Comics,good
+Male,red,God / Eternal,Green,Marvel Comics,good
+-,-,God / Eternal,-,Marvel Comics,good
+Male,green,Symbiote,Red,Marvel Comics,bad
+Female,blue,-,Blond,Marvel Comics,good
+Female,-,-,-,Marvel Comics,good
+Female,green,Human,Black,DC Comics,good
+-,brown,-,Brown,Marvel Comics,good
+Male,white,Alien,White,Marvel Comics,good
+Female,-,Mutant,-,Marvel Comics,good
+Male,brown,Mutant,Brown,Marvel Comics,good
+Male,-,-,-,DC Comics,bad
+Male,brown,-,Black,Marvel Comics,bad
+Female,green,Human,Blond,DC Comics,bad
+Female,green,Human,Brown,DC Comics,bad
+Female,brown,Human,Brown,DC Comics,bad
+Male,brown,-,Red / Grey,Team Epic TV,bad
+Male,green,Human,Red,DC Comics,good
+Female,blue,-,Blond,NBC - Heroes,good
+-,-,-,White,Marvel Comics,good
+Male,brown,-,black,Marvel Comics,good
+Male,blue,Human,Black,DC Comics,bad
+Male,-,-,-,Image Comics,bad
+Male,grey,-,Brown,HarperCollins,good
+Male,-,-,-,DC Comics,good
+Male,silver,Mutant,Black,Marvel Comics,good
+Female,red,Mutant,White,Marvel Comics,neutral
+Male,brown,-,Brown,Marvel Comics,good
+Male,brown,Human,Black,Marvel Comics,bad
+Male,blue,-,Strawberry Blond,Marvel Comics,good
+Male,brown,-,No Hair,Marvel Comics,good
+Female,green,Inhuman,Red,Marvel Comics,good
+Male,-,-,-,Image Comics,bad
+Male,-,-,-,Image Comics,bad
+Male,brown,Cyborg,Black,DC Comics,good
+Male,blue,Cyborg,Black,DC Comics,bad
+Male,brown,Mutant,Brown,Marvel Comics,good
+-,blue,-,Blond,Marvel Comics,good
+Female,blue,-,Blond,Marvel Comics,good
+Male,brown,-,Blond,HarperCollins,good
+Female,-,-,-,ABC Studios,good
+Male,blue,Human,Red,Marvel Comics,good
+Male,brown,Human,Brown,Marvel Comics,good
+Male,-,-,-,Universal Studios,good
+Male,red,New God,No Hair,DC Comics,bad
+Female,brown,Mutant,Blond,Marvel Comics,good
+Male,yellow / red,Dathomirian Zabrak,-,George Lucas,bad
+Male,yellow,Cyborg,No Hair,George Lucas,bad
+Male,blue,Human,Blond,Dark Horse Comics,good
+Male,yellow,Android,Brown,Star Trek,good
+Female,blue,Mutant,Blond,Marvel Comics,good
+Male,blue,Human,Black,DC Comics,good
+Male,brown,Mutant,No Hair,Marvel Comics,neutral
+Male,brown,Human,Brown,DC Comics,bad
+Male,brown,Cyborg,Grey,Marvel Comics,good
+Male,blue,Human,White,DC Comics,neutral
+Male,red,Demon,No Hair,Marvel Comics,bad
+Male,-,-,-,Marvel Comics,bad
+Male,brown,Human,Black,Marvel Comics,bad
+Male,-,-,-,NBC - Heroes,good
+Male,blue,Human / Radiation,Green,Marvel Comics,good
+Male,brown,Human,Brown,Marvel Comics,bad
+Male,brown,-,Brown,Marvel Comics,bad
+Male,blue,Human,Blond,DC Comics,good
+Male,brown,Human,Brown,Marvel Comics,bad
+Male,grey,Human,Black,Marvel Comics,good
+Female,blue,Human,Black,Marvel Comics,good
+Male,green,Mutant,No Hair,IDW Publishing,good
+Female,blue,Amazon,Black,DC Comics,good
+Male,red,Alien,White,DC Comics,bad
+Male,white,-,No Hair,Marvel Comics,bad
+Male,yellow,-,No Hair,Marvel Comics,bad
+Male,white,Human / Cosmic,No Hair,DC Comics,good
+Male,red,Human / Altered,No Hair,Marvel Comics,good
+-,-,-,-,Marvel Comics,bad
+Female,brown,Human,Brown,Dark Horse Comics,good
+Male,blue,Human,Auburn,Marvel Comics,bad
+Female,blue,Human,Black,Marvel Comics,good
+Female,blue,-,Blond,NBC - Heroes,bad
+Male,blue,-,Red,DC Comics,good
+Female,blue,-,Blond,Marvel Comics,good
+Female,blue,Human,Blond,DC Comics,good
+Female,-,-,-,HarperCollins,good
+Male,-,-,-,DC Comics,good
+Male,red,Demon,No Hair,DC Comics,neutral
+Male,white,Mutant,Red,Marvel Comics,bad
+Male,red,Alien,Black,Marvel Comics,bad
+Male,blue,Mutant,Black,Marvel Comics,bad
+-,blue,-,Brown,Marvel Comics,bad
+Male,brown,Human,Black,Marvel Comics,good
+Male,black,-,Blue,Marvel Comics,bad
+Female,-,Kryptonian,-,DC Comics,bad
+-,yellow (without irises),-,Orange / White,Marvel Comics,good
+Female,-,-,Red,DC Comics,good
+Male,red,Kakarantharaian,No Hair,Marvel Comics,good
+Female,brown,-,Black,Marvel Comics,good
+-,white,-,Yellow,Marvel Comics,good
+Female,green,Mutant,Red,Marvel Comics,good
+Male,brown,-,Black,DC Comics,good
+Male,blue,Human,Auburn,DC Comics,good
+-,red,-,No Hair,Marvel Comics,bad
+Male,blue,Human,Brown / White,DC Comics,good
+Male,blue,Human,Blond,DC Comics,good
+Male,-,Human,-,DC Comics,good
+Male,yellow,Human,Auburn,DC Comics,good
+-,brown,-,Black,Marvel Comics,good
+Male,blue,Mutant,Blond,Marvel Comics,good
+-,blue,-,Grey,Marvel Comics,good
+Female,brown,-,Black,Marvel Comics,bad
+Female,blue,-,White,Marvel Comics,good
+Male,black,Cosmic Entity,Black,Marvel Comics,neutral
+Male,red,Mutant,Brown,Marvel Comics,good
+Female,yellow,Zen-Whoberian,Black,Marvel Comics,good
+Male,-,Mutant,-,DC Comics,good
+Male,-,Alpha,-,SyFy,good
+Male,black,Kryptonian,Black,DC Comics,bad
+Male,blue,-,Blond,Marvel Comics,good
+Male,red,Demon,No Hair,Marvel Comics,good
+-,-,-,-,Marvel Comics,good
+Male,-,Human,-,Marvel Comics,good
+Male,-,-,-,Marvel Comics,good
+Female,green,-,Red,DC Comics,bad
+Male,blue,Strontian,Blue,Marvel Comics,neutral
+Female,green,-,Red,Marvel Comics,bad
+Male,-,-,-,DC Comics,bad
+Male,-,Saiyan,-,Shueisha,good
+Male,-,-,-,Marvel Comics,good
+Male,-,Human,-,Marvel Comics,good
+Male,-,Human,-,Marvel Comics,good
+Male,brown,-,Black,Marvel Comics,good
+Male,yellow,Gorilla,Black,DC Comics,bad
+Female,blue,-,White,DC Comics,bad
+Male,blue,Human,Brown,Marvel Comics,good
+Male,purple,Rodian,-,George Lucas,bad
+Male,green,Human,Blond,DC Comics,good
+Male,blue,Human,Auburn,Marvel Comics,bad
+Male,blue,-,Auburn,Marvel Comics,bad
+Male,-,-,-,Marvel Comics,good
+Male,green,-,Brown,Marvel Comics,good
+Male,yellow,Flora Colossus,-,Marvel Comics,good
+Male,brown,Human,Black,Marvel Comics,good
+Male,blue,Human-Vuldarian,Red,DC Comics,good
+Male,brown,Human,Brown,DC Comics,good
+Male,brown,Human,Brown,George Lucas,good
+Male,brown,Human,Black,Sony Pictures,good
+Female,blue,Human,Blond,DC Comics,bad
+Male,green,Human,Black,J. K. Rowling,good
+Male,blue,Mutant,Blond,Marvel Comics,good
+Male,red,-,Brown,DC Comics,good
+Male,blue,Human,Blond,Marvel Comics,good
+Female,blue,Human,Black,Marvel Comics,good
+Female,green,-,Red,DC Comics,good
+Male,blue,-,Brown,DC Comics,good
+Female,green,-,Red,DC Comics,good
+Female,-,-,-,DC Comics,good
+Female,blue,-,Red,DC Comics,good
+Male,blue,Human,No Hair,DC Comics,bad
+Female,green,Asgardian,Black,Marvel Comics,bad
+Male,gold,Demon,Black,Dark Horse Comics,good
+Female,blue,Human,Red,Marvel Comics,good
+Male,red,-,Red,Marvel Comics,good
+Male,blue,Demi-God,Brown,Marvel Comics,good
+Male,-,-,-,NBC - Heroes,good
+Female,-,Human,-,Icon Comics,good
+Male,blue,-,Grey,Marvel Comics,bad
+Female,blue,-,Red,Marvel Comics,good
+Female,green,-,Red,Marvel Comics,good
+Male,brown,-,Yellow,Marvel Comics,good
+Male,green,Human / Radiation,Green,Marvel Comics,good
+Male,blue,Human / Radiation,Blond,Marvel Comics,good
+Female,blue,-,Black,DC Comics,good
+Female,blue,Mutant,Blond,Marvel Comics,good
+Male,brown,Symbiote,Black,Marvel Comics,good
+Male,brown,-,Brown,Marvel Comics,bad
+Male,blue,Eternal,Red,Marvel Comics,good
+Male,brown,Mutant,Brown,Marvel Comics,good
+Male,yellow,Human,Auburn,DC Comics,good
+Male,-,Human,-,George Lucas,good
+Female,-,Alien,Purple,DC Comics,neutral
+Male,blue,Mutant,No Hair,Marvel Comics,good
+Female,blue,Human / Radiation,Blond,Marvel Comics,good
+Male,blue,Human,Blond,Marvel Comics,good
+Male,blue,Human,Black,Marvel Comics,good
+Male,blue,-,No Hair,Marvel Comics,bad
+Female,-,-,-,DC Comics,good
+Male,blue / white,Human,Brown,Marvel Comics,good
+Male,blue,Human,Brown,Dark Horse Comics,good
+Male,blue,Human,Blond,Titan Books,good
+Male,hazel,Human,Brown,Star Trek,good
+Male,yellow,Gungan,-,George Lucas,good
+Female,green,Mutant,Red,Marvel Comics,good
+Male,-,Human,-,Star Trek,good
+Female,blue,-,Blond,Marvel Comics,good
+Female,-,Human,-,DC Comics,good
+Female,green,Human,Brown,DC Comics,good
+Female,brown,Human,Brown,Marvel Comics,good
+Female,-,-,-,NBC - Heroes,good
+Male,blue,-,Black,Marvel Comics,bad
+Male,-,-,-,ABC Studios,good
+Male,-,-,-,ABC Studios,good
+Male,-,-,-,Dark Horse Comics,good
+Male,blue,Human,Blond,DC Comics,good
+Male,green,Human,Black,DC Comics,good
+Male,brown,-,Black,Marvel Comics,good
+Male,green,Human,Green,DC Comics,bad
+Female,blue,-,Black,Marvel Comics,good
+Female,red,Mutant,Black,Marvel Comics,good
+Male,-,Human,-,Rebellion,good
+Male,blue,Human,Red,Marvel Comics,neutral
+Male,-,Mutant,-,Marvel Comics,bad
+Male,hazel,Human,Brown,Marvel Comics,good
+Female,green,Human,Brown,George Lucas,good
+Male,white,Android,No Hair,George Lucas,good
+Male,brown,-,Brown,Marvel Comics,bad
+Male,brown,Human,Brown,DC Comics,good
+Female,-,Human,-,Star Trek,good
+Male,-,Human,Black,DC Comics,good
+Male,blue,Human,Blond,Icon Comics,good
+Male,green,Human,Red,DC Comics,good
+Male,-,-,-,DC Comics,good
+Male,red,Metahuman,No Hair,DC Comics,bad
+Female,blue,Human,Blond,DC Comics,bad
+Male,red,Bolovaxian,No Hair,DC Comics,good
+Male,black,Animal,No Hair,DC Comics,bad
+Male,blue,Human,No Hair,Marvel Comics,bad
+Male,red,Human,No Hair,Marvel Comics,bad
+Male,brown,Human,Black,Marvel Comics,bad
+Male,brown,Human,Black,Marvel Comics,bad
+Male,blue,Kryptonian,White,DC Comics,good
+Male,green,Human,Black,DC Comics,good
+Male,-,Human,-,George Lucas,bad
+Female,-,-,Black,Marvel Comics,bad
+Female,brown,Cyborg,Black,Marvel Comics,bad
+Male,green,-,No Hair,Marvel Comics,bad
+Male,-,-,-,Marvel Comics,good
+Male,green / blue,Mutant,Black,Marvel Comics,good
+Male,blue,Mutant,No Hair,IDW Publishing,good
+Male,green,Human,No Hair,DC Comics,bad
+Female,blue,-,Red,DC Comics,good
+Male,blue,-,Red,DC Comics,good
+Male,blue,-,Red,DC Comics,bad
+-,yellow,-,-,Marvel Comics,bad
+-,blue,Cosmic Entity,No Hair,Marvel Comics,neutral
+Female,-,-,-,Dark Horse Comics,good
+Male,red,Human,No Hair,Marvel Comics,bad
+Male,red,Czarnian,Black,DC Comics,neutral
+Male,green,Asgardian,Black,Marvel Comics,bad
+Male,blue,Human,Blond,Marvel Comics,good
+Male,brown,Human,Black,Marvel Comics,good
+Male,-,-,-,NBC - Heroes,bad
+Male,blue,Human,Blond,George Lucas,good
+Female,-,Human,-,Marvel Comics,good
+Female,green,-,Green,Marvel Comics,good
+Male,brown,-,Brown,Marvel Comics,bad
+-,red,-,Black,Marvel Comics,good
+Male,grey,Mutant,White,Marvel Comics,bad
+Male,blue,-,Blond,DC Comics,good
+Male,black,-,-,Marvel Comics,bad
+-,blue,God / Eternal,Silver,Image Comics,-
+Male,brown,Human,Brown,DC Comics,neutral
+Male,red,-,No Hair,Marvel Comics,good
+Male,brown,-,Auburn,Marvel Comics,good
+Male,blue,Human,White,Marvel Comics,bad
+Female,green,Human-Kree,Black,Marvel Comics,good
+Male,red,Martian,No Hair,DC Comics,good
+Female,green,-,Red,Marvel Comics,good
+Male,blue,-,Black,Team Epic TV,good
+Male,brown,Human / Altered,Brown,Microsoft,good
+Male,black,-,Black,DC Comics,bad
+Male,-,-,-,NBC - Heroes,good
+Male,blue,-,Black,Marvel Comics,good
+Female,brown,-,Red,DC Comics,bad
+Female,-,-,-,NBC - Heroes,good
+Female,green,Inhuman,Red,Marvel Comics,good
+Female,blue,-,Blond,Marvel Comics,good
+Male,white,-,Black,Marvel Comics,bad
+Female,blue,Atlantean,Red,DC Comics,good
+Male,green,Android,Brown,DC Comics,bad
+Male,black,-,No Hair,DC Comics,good
+Female,-,-,-,Marvel Comics,good
+Male,blue,-,Black,DC Comics,good
+Male,brown,-,Black,NBC - Heroes,good
+Male,blue,Mutant,-,IDW Publishing,good
+Male,grey,-,Brown,DC Comics,good
+Male,brown,-,Brown,Marvel Comics,good
+Female,-,-,-,Wildstorm,good
+Female,blue,-,Red,DC Comics,good
+Female,red,-,Red,DC Comics,good
+Male,brown,Human / Radiation,Brown,Marvel Comics,good
+Male,-,Human,-,DC Comics,bad
+Male,blue,Spartoi,Brown,Marvel Comics,bad
+Male,-,God / Eternal,-,DC Comics,bad
+Male,red,Human / Altered,Black,Marvel Comics,bad
+Male,blue,Human,Blond,DC Comics,bad
+Female,blue,Human,Blond,Marvel Comics,good
+Male,white,Cyborg,Brownn,Marvel Comics,bad
+Male,-,Planet,-,DC Comics,good
+Male,-,-,-,NBC - Heroes,good
+Male,-,-,-,DC Comics,bad
