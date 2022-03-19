@@ -1,6 +1,7 @@
 package machinelearningproject;
 //List and ArrayList are used for dynamic storage of data.
 import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.List;
 
 
@@ -13,7 +14,7 @@ import java.util.List;
  *
  * @author Jack O'Shea
  * @version 1.0
- * @since 13/02/2022
+ * @since 13/03/2022
  *
  */
 public class DataAnalyser
@@ -59,6 +60,12 @@ public class DataAnalyser
      */
     protected List<String> classes = new ArrayList<>();
 
+
+    //TODO REMOVE IF ERROR
+
+    public Hashtable<String, List<String>> featuresResultsTable= new Hashtable<>();
+
+
     /**
      * <p>This method is the constructor for the DataAnalyser class and is used to read in an input
      * string and manipulate it into variables which are easier to use. </p>
@@ -96,14 +103,21 @@ public class DataAnalyser
         //Gets the features of the dataset into a String list for easier analysis.
         setFeatures();
 
+
+
         //Sets the concept of the dataset. IE. The question being asked
         setConcept();
+
+
 
         /*
         Call to the separateData method which creates the training data and testing data.
         The 70 represents 70% which is what percentage of the data will be used for training.
         */
         separateData(70);
+
+        //Gets the possible values for each feature.
+        setFeatureResults();
 
 
 
@@ -160,7 +174,11 @@ public class DataAnalyser
         System.out.println("\nInput Data Array");
         System.out.println("=================\n");
 
-        System.out.println("\n Features");
+        for(String data : getInputDataArray())
+        {
+            System.out.println(data);
+        }
+        System.out.println("\nFeatures");
         System.out.println("=========");
 
         for(String feature: getFeatures())
@@ -215,6 +233,35 @@ public class DataAnalyser
             this.features.add(feature);
         }
     }
+
+    /**
+     * This method is used to get the possible results of each feature in the dataset.
+     */
+    public void setFeatureResults()
+    {
+        //For every feature in the list.
+        for(int i=0; i<features.size();i++)
+        {
+            List<String> answers = new ArrayList<>();
+            //Gather all the possible answers
+            for(String row : trainingArray)
+            {
+                //Split row into columns
+                String[] rowSegments = row.split("[,;]");
+
+                //If it is not in the answers array.
+                if(!answers.contains(rowSegments[i]))
+                {
+                    answers.add(rowSegments[i]);
+                }
+
+            }
+            //Add a new entry to the dictionary.
+            featuresResultsTable.put(features.get(i),answers);
+        }
+    }
+
+
 
     /**
      * <p>This method is used to set the concept of the dataset. </p>
@@ -298,10 +345,7 @@ public class DataAnalyser
      * <p>This method is used to get the inputData as a string of the dataset. </p>
      */
     public String getInputData() {
-        System.out.println("Inputted Data");
-        System.out.println("==============");
 
-        System.out.println(inputData);
         return inputData;
     }
     /**
@@ -310,6 +354,11 @@ public class DataAnalyser
     public List<String> getClasses() {
 
         return classes;
+    }
+
+    public Hashtable<String, List<String>> getFeatureResults()
+    {
+        return featuresResultsTable;
     }
 
 

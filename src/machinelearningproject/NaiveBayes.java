@@ -11,20 +11,19 @@ import java.util.List;
  *
  * @author Jack O'Shea
  * @version 1.0
- * @since 13/02/2022
+ * @since 13/03/2022
  *
  */
 public class NaiveBayes extends DataAnalyser
 {
-
     /**
      * Aggregate table stores all the possible combinations of data.
      */
-    public Hashtable<String, Integer> aggTable = new Hashtable<>();
+    private Hashtable<String, Integer> aggTable = new Hashtable<>();
     /**
      * The probability table stores the prior probabilities for calculations.
      */
-    public Hashtable<String, Double> probTable = new Hashtable<>();
+    private Hashtable<String, Double> probTable = new Hashtable<>();
 
     /**
      * <p>This method is the constructor for the Naive Bayes class which extends DataAnalyser
@@ -36,7 +35,7 @@ public class NaiveBayes extends DataAnalyser
         super(inputData);
 
         //Call to aggregate function to get the aggregate table.
-        getAggregate();
+        setAggregate();
 
 
         //Call to generate the prior possibilities used for calculations.
@@ -156,7 +155,8 @@ public class NaiveBayes extends DataAnalyser
      * <p>This method is used create a table of all the possibilities </p>
      *
      */
-    private void getAggregate()
+    private void setAggregate()
+
     {
         //For each row in the training array.
         for(String row: trainingArray)
@@ -221,4 +221,21 @@ public class NaiveBayes extends DataAnalyser
             probTable.put("P(" + classifier + ")",counter / trainingArray.size());
         }
     }
+
+
+    /**
+     * <p>This method is used to return the aggregate table to standard output.</p>
+     * @return aggTable the table of all the aggregate results
+     */
+    public Hashtable<String, Integer> getAggTable() {
+        return aggTable;
+    }
+    /**
+     * <p>This method is used to return the probability table to standard output.</p>
+     * @return probTable the table of the prior possibilities.
+     */
+    public Hashtable<String, Double> getProbTable() {
+        return probTable;
+    }
 }
+
