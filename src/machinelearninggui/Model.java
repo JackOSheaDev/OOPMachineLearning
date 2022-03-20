@@ -34,7 +34,7 @@ public class Model
     /**
      * The array which contains the user's choices to be fed into the ML Algorithm.
      */
-    protected List<String> userChoices = new ArrayList<>();
+    private final List<String> userChoices = new ArrayList<>();
 
 
     //DATA-SCAN VARIABLES
@@ -73,6 +73,7 @@ public class Model
         //Scan the data.
         dataScan = new NaiveBayes(fileContents);
 
+        //Get the features of the dataset and possible values.
         features = dataScan.getFeatures();
         featuresResults = dataScan.getFeatureResults();
 
