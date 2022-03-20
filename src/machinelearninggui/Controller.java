@@ -1,14 +1,39 @@
 package machinelearninggui;
 
+//Libraries for GUI and action listeners for buttons.
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+//Personal library to create button with custom styling.
+import static machinelearninggui.CustomComponents.createButton;
+
+
+/**
+ * This class operates as the controller of the MVC Design pattern, it is used to read information from the model
+ * and modify the view.
+ *
+ * @author Jack O'Shea
+ * @version 1.0
+ * @since 20/03/2022
+ */
 public class Controller implements ActionListener
 {
-    private View view = new View();
-    private Model model = new Model();
-    private String dataset;
+    /**
+     * The view which the controller is modifying.
+     */
+    private final View view;
+    /**
+     * The model which the data is being read from and written to.
+     */
+    private final Model model;
 
+
+    /**
+     * Constructor which creates a controller object.
+     * @param view the UI of the program which is modified by this controller.
+     * @param model the data of this program which is read from and written to by this controller.
+     */
     public Controller(View view, Model model)
     {
             //Save view and model as variables.
@@ -22,84 +47,125 @@ public class Controller implements ActionListener
             this.view.getEntrepreneur().addActionListener(this);
             this.view.getSuperhero().addActionListener(this);
 
-            this.view.getChoice1().addActionListener(this);
-            this.view.getChoice2().addActionListener(this);
     }
+
+    /**
+     * This method initialises the question screen, sets the text of the question, and creates the buttons.
+     */
     public void getQuestion()
     {
-        //Change screen
-        view.getFrame().remove(view.getMainScreen());
-        view.getFrame().add(view.getQuestionPanel());
-        //view.reset();
+        //Restart the screen.
+        view.setupQuestion();
 
-        //Setup screen.
+        //Set the question text.
         view.getQuestion().setText(model.getFeature());
-        view.getChoice1().setText(model.getChoice1());
-        view.getChoice2().setText(model.getChoice2());
+
+        //Removes all buttons from the list
+        view.getButtons().clear();
+
+
+        //For each user choice create a new button.
+        for(String choice: model.getChoices())
+        {
+            view.addButton(createButton(choice));
+        }
+
+        //Add action listeners to the buttons and place them on the panel.
+        for(JButton button : view.getButtons())
+        {
+            button.addActionListener(this);
+            view.getQuestionPanel().add(button);
+            view.getQuestionPanel().add(Box.createVerticalStrut(15));
+
+
+        }
+
+        //Reset the view to update new buttons.
+        view.getFrame().revalidate();
+        view.getFrame().repaint();
 
     }
+
+    /**
+     * Displays the final value and outputs it to terminal for error testing.
+     */
     public void displayResult()
     {
-        view.getFrame().remove(view.getQuestionPanel());
-        view.getFrame().add((view.getResultScreen()));
+        //Set up the view with new screen.
+        view.setupResult();
+
+        //Print result to stdout
+        System.out.println("Model Prediction using Naive Bayes: " + model.getResult());
+
+
+        //Updates the UI elements.
+        view.getResultConcept().setText(model.getConcept());
         view.getResultLabel().setText(model.getResult());
 
     }
 
+    /**
+     * Action listener which checks for button presses and performs actions based on the source.
+     * @param e an action event, IE a button press.
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
+
+        //If the button presses is called Entrepreneur.
         if (view.getEntrepreneur().equals(e.getSource())) {
+            //Print to STD output
             System.out.println("Entrepreneur dataset was chosen.");
-            dataset = "Entrepreneur";
+
+            //Set the correct dataset
             model.setFilename("MLData.csv");
+            //Set the concept of the dataset
+            model.setConcept("Will this person become an entrepreneur?");
+
+            //Begin the setup to initialise the screen.
+            view.setupQuestion();
+            //Gets the next question
             getQuestion();
         }
+
+        //Commented out, accesses secondary database.
+        /*
         else if(view.getSuperhero().equals(e.getSource()))
+
         {
             System.out.println("Superhero dataset was chosen.");
             dataset = "Superhero";
             model.setFilename("superhero.csv");
             getQuestion();
         }
-        else if(view.getChoice1().equals(e.getSource()))
-        {
-            if(model.getLastIndex()-1 == model.getCurrentIndex())
+        */
+        else
+        {   //If an action event occurs otherwise, it is a part of the button array.
+            for(int i=0;i<model.getChoices().size();i++)
             {
-                System.out.print("Hello");
-                model.setUserChoices(view.getChoice1().getText());
-                //TODO Remove
-                System.out.println(model.userChoices);
-                displayResult();
-            }
-            else
-            {
-                model.setUserChoices(view.getChoice1().getText());
-                //TODO Remove
-                System.out.println(model.userChoices);
-                model.incrementCurrentIndex();
-                getQuestion();
-            }
+                //Check each button in the array to find the source.
+                if(view.getButtons().get(i).equals(e.getSource()))
+                {
+                    //Print to STD output the user choice.
+                    System.out.println("User choice was: " + view.getButtons().get(i).getText());
+                    //Add the button text to the userChoice data structure
+                    model.addUserChoice(view.getButtons().get(i).getText());
+                    //Print out all the users choices so far.
+                    System.out.println(model.getUserChoices());
 
-        }
-        else if(view.getChoice2().equals(e.getSource()))
-        {
-            if(model.getLastIndex()-1 == model.getCurrentIndex())
-            {
-                System.out.print("Hello");
-                model.setUserChoices(view.getChoice2().getText());
-                //TODO Remove
-                System.out.println(model.userChoices);
-                displayResult();
-            }
-            else
-            {
-                model.setUserChoices(view.getChoice2().getText());
-                //TODO Remove
-                System.out.println(model.userChoices);
-                model.incrementCurrentIndex();
-                getQuestion();
+                    //Next question is only displayed if there is one.
+                    if(model.hasNextQuestion())
+                    {
+                        model.incrementCurrentIndex();
+                        getQuestion();
+                    }
+                    //Otherwise, show results of the data entry.
+                    else
+                    {
+                        displayResult();
+                    }
+
+                }
             }
         }
-
     }
 }
