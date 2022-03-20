@@ -15,15 +15,31 @@ public class View
     private JButton superhero = createButton("Superhero Dataset");
     private JButton entrepreneur = createButton("Entrepreneur Dataset");
 
+
+
     private JLabel question = createTitle("Lorem");
-
-
-
     private JButton choice1 = createButton("Lorem");
-
-
-
     private JButton choice2 = createButton("Lorem");
+
+
+
+    public JPanel getResultScreen() {
+        return resultScreen;
+    }
+
+    public JLabel getResultLabel() {
+        return resultLabel;
+    }
+
+    private JPanel resultScreen = new JPanel();
+
+    //TODO Modify
+    private JLabel resultLabel = new JLabel();
+
+
+
+    private JLabel resultProb = new JLabel();
+
     public void beginView()
     {
         frame.setTitle("Naive Bayes Algorithm");
@@ -32,9 +48,18 @@ public class View
         mainScreen.add(superhero);
         mainScreen.add(entrepreneur);
 
+
+
+        //QuestionPanel which is added afterwards.
         questionPanel.add(question);
         questionPanel.add(choice1);
         questionPanel.add(choice2);
+
+
+        //Result Screen
+        resultScreen.add(resultLabel);
+        resultScreen.add(resultProb);
+
 
 
         frame.add(mainScreen);
@@ -73,6 +98,9 @@ public class View
     public JButton getChoice2() {
         return choice2;
     }
+
+
+
 
     public void reset()
     {

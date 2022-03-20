@@ -21,18 +21,28 @@ public class Controller implements ActionListener
             //Add action listeners to the buttons.
             this.view.getEntrepreneur().addActionListener(this);
             this.view.getSuperhero().addActionListener(this);
+
+            this.view.getChoice1().addActionListener(this);
+            this.view.getChoice2().addActionListener(this);
     }
-    public void startQuestions()
+    public void getQuestion()
     {
         //Change screen
         view.getFrame().remove(view.getMainScreen());
         view.getFrame().add(view.getQuestionPanel());
-        view.reset();
+        //view.reset();
 
         //Setup screen.
-        view.getQuestion().setText("Hello");
-        view.getChoice1().setText("A");
-        view.getChoice2().setText("B");
+        view.getQuestion().setText(model.getFeature());
+        view.getChoice1().setText(model.getChoice1());
+        view.getChoice2().setText(model.getChoice2());
+
+    }
+    public void displayResult()
+    {
+        view.getFrame().remove(view.getQuestionPanel());
+        view.getFrame().add((view.getResultScreen()));
+        view.getResultLabel().setText(model.getResult());
 
     }
 
@@ -42,14 +52,53 @@ public class Controller implements ActionListener
             System.out.println("Entrepreneur dataset was chosen.");
             dataset = "Entrepreneur";
             model.setFilename("MLData.csv");
-            startQuestions();
+            getQuestion();
         }
         else if(view.getSuperhero().equals(e.getSource()))
         {
             System.out.println("Superhero dataset was chosen.");
             dataset = "Superhero";
             model.setFilename("superhero.csv");
-            startQuestions();
+            getQuestion();
+        }
+        else if(view.getChoice1().equals(e.getSource()))
+        {
+            if(model.getLastIndex()-1 == model.getCurrentIndex())
+            {
+                System.out.print("Hello");
+                model.setUserChoices(view.getChoice1().getText());
+                //TODO Remove
+                System.out.println(model.userChoices);
+                displayResult();
+            }
+            else
+            {
+                model.setUserChoices(view.getChoice1().getText());
+                //TODO Remove
+                System.out.println(model.userChoices);
+                model.incrementCurrentIndex();
+                getQuestion();
+            }
+
+        }
+        else if(view.getChoice2().equals(e.getSource()))
+        {
+            if(model.getLastIndex()-1 == model.getCurrentIndex())
+            {
+                System.out.print("Hello");
+                model.setUserChoices(view.getChoice2().getText());
+                //TODO Remove
+                System.out.println(model.userChoices);
+                displayResult();
+            }
+            else
+            {
+                model.setUserChoices(view.getChoice2().getText());
+                //TODO Remove
+                System.out.println(model.userChoices);
+                model.incrementCurrentIndex();
+                getQuestion();
+            }
         }
 
     }
