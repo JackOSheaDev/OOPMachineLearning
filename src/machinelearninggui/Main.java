@@ -2,7 +2,7 @@ package machinelearninggui;
 
 /**
  * This is a class that is used to run the main GUI. It uses an MVC design pattern to ensure the logic is seperated
- * from te design of the application.
+ * from the design of the application.
  *
  * @author Jack O'Shea
  * @version 1.0
@@ -19,6 +19,7 @@ public class Main
      * The model/data of the application which is modified and controlled by the controller.
      */
     static Model data = new Model();
+
 
 
     /**
