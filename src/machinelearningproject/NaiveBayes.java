@@ -49,6 +49,7 @@ public class NaiveBayes extends DataAnalyser
      * <p>This method is used to perform methods which analyse the data. </p>
      * @param args The arguments passed to the probability function to get the probability of
      *             a set of arguments.
+     * @return the machine predicted result.
      */
     public String generateProbability(String [] args)
     {
@@ -104,7 +105,9 @@ public class NaiveBayes extends DataAnalyser
         return getClasses().get(max_index);
     }
 
-
+    /**
+     * Datatest is used to verify the accuracy of the dataset.
+     */
     public void dataTest()
     {
         int incorrect = 0;

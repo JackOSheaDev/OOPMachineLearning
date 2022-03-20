@@ -44,7 +44,7 @@ public class CustomComponents {
 
 
     /**
-     * This method creates a button with customised styling.
+     * <p>This method creates a button with customised styling.</p>
      * @param text the text used as a label for the button.
      * @return a JButton object to be used in the view.
      */
@@ -60,7 +60,7 @@ public class CustomComponents {
     }
 
     /**
-     * This method creates a title with customised styling
+     * <p>This method creates a title with customised styling</p>
      * @param text the text used for the label.
      * @return a JLabel object with customised styling to be used in the view.
      */
@@ -74,7 +74,7 @@ public class CustomComponents {
     }
 
     /**
-     * Creates a new Panel with the background color already set with the option of adding more styling.
+     * <p>Creates a new Panel with the background color already set with the option of adding more styling.</p>
      * @return a JPanel object with the background color set.
      */
     static JPanel createPanel()
@@ -85,7 +85,7 @@ public class CustomComponents {
     }
 
     /**
-     * Creates a new Label with the styling and centering already implemented.
+     * <p>Creates a new Label with the styling and centering already implemented.</p>
      * @param text the text used for the label.
      * @return a JLabel object with the styling already done.
      */

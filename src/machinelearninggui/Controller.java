@@ -50,7 +50,7 @@ public class Controller implements ActionListener
     }
 
     /**
-     * This method initialises the question screen, sets the text of the question, and creates the buttons.
+     * <p>This method initialises the question screen, sets the text of the question, and creates the buttons.</p>
      */
     public void getQuestion()
     {
@@ -87,7 +87,7 @@ public class Controller implements ActionListener
     }
 
     /**
-     * Displays the final value and outputs it to terminal for error testing.
+     * <p>Displays the final value and outputs it to terminal for error testing.</p>
      */
     public void displayResult()
     {
@@ -105,7 +105,7 @@ public class Controller implements ActionListener
     }
 
     /**
-     * Action listener which checks for button presses and performs actions based on the source.
+     * <p>Action listener which checks for button presses and performs actions based on the source.</p>
      * @param e an action event, IE a button press.
      */
     @Override

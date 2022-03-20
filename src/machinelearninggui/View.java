@@ -57,7 +57,7 @@ public class View
 
 
     /**
-     * Begin View is a method called by the Controller to initialise the view.
+     * <p>Begin View is a method called by the Controller to initialise the view.</p>
      */
     public void beginView()
     {
@@ -70,7 +70,7 @@ public class View
     }
 
     /**
-     * Method which initialises the frame with the correct size, title and sets it to visible.
+     * <p>Method which initialises the frame with the correct size, title and sets it to visible.</p>
      */
     public void setupFrame()
     {
@@ -81,7 +81,7 @@ public class View
     }
 
     /**
-     * Method which initialises the first screen with all its UI elements and sets the layout type.
+     * <p>Method which initialises the first screen with all its UI elements and sets the layout type.</p>
      */
     public void beginMain()
     {
@@ -108,7 +108,7 @@ public class View
     }
 
     /**
-     * Sets up a question panel with
+     * <p>Sets up a question panel with the questions </p>
      */
     public void setupQuestion()
     {
@@ -124,7 +124,7 @@ public class View
     }
 
     /**
-     *Sets up the results' page with the correct UI elements.
+     *<p>Sets up the results' page with the correct UI elements.</p>
      */
     public void setupResult()
     {
@@ -146,7 +146,7 @@ public class View
     //GETTERS AND SETTERS.
 
     /**
-     * Returns the frame/window of the application
+     * <p>Returns the frame/window of the application</p>
      * @return the address of the Frame Object.
      */
     public JFrame getFrame()
@@ -155,7 +155,7 @@ public class View
     }
 
     /**
-     * Returns the main screen of the application.
+     * <p>Returns the main screen of the application.</p>
      * @return the address of the mainScreen object.
      */
     public JPanel getMainScreen()
@@ -164,7 +164,7 @@ public class View
     }
 
     /**
-     * Gets the superhero button which is a secondary dataset.
+     * <p>Gets the superhero button which is a secondary dataset.</p>
      * @return the address of the superhero button.
      */
     public JButton getSuperhero() {
@@ -172,7 +172,7 @@ public class View
     }
 
     /**
-     * Gets the entrepreneur button which is the primary dataset.
+     * <p>Gets the entrepreneur button which is the primary dataset.</p>
      * @return the address of the entrepreneur button.
      */
     public JButton getEntrepreneur() {
@@ -181,7 +181,7 @@ public class View
 
 
     /**
-     * Gets the question panel which is used to modify elements by the controller.
+     * <p>Gets the question panel which is used to modify elements by the controller.</p>
      * @return the address of the question panel.
      */
     public JPanel getQuestionPanel() {
@@ -189,7 +189,7 @@ public class View
     }
 
     /**
-     * Gets the question label, so it can be modified by the controller.
+     * <p>Gets the question label, so it can be modified by the controller.</p>
      * @return the address of the question label.
      */
     public JLabel getQuestion() {
@@ -197,7 +197,7 @@ public class View
     }
 
     /**
-     * Gets all the button elements to be used for the question screen.
+     * <p>Gets all the button elements to be used for the question screen.</p>
      * @return the list of all buttons on the question screen.
      */
     public List<JButton> getButtons() {
@@ -205,7 +205,7 @@ public class View
     }
 
     /**
-     * A setter function which adds a new button to the UI.
+     * <p>A setter function which adds a new button to the UI.</p>
      * @param button the button you wish to add, used by the controller.
      */
     public void addButton(JButton button) {
@@ -213,7 +213,7 @@ public class View
     }
 
     /**
-     * Returns the result screen which is modified by the controller.
+     * <p>Returns the result screen which is modified by the controller.</p>
      * @return the address of the resultScreen.
      */
     public JPanel getResultScreen() {
@@ -221,7 +221,7 @@ public class View
     }
 
     /**
-     * Returns the results label, so it can be modified by the controller.
+     * <p>Returns the results label, so it can be modified by the controller.</p>
      * @return the address of the JLabel so it can be modified.
      */
     public JLabel getResultLabel() {
@@ -229,7 +229,7 @@ public class View
     }
 
     /**
-     * The result concept label is used to modify the concept of the dataset on the UI.
+     * <p>The result concept label is used to modify the concept of the dataset on the UI.</p>mac
      * @return the address of the JLabel so it can be modified by the controller.
      */
     public JLabel getResultConcept()

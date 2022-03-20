@@ -23,7 +23,7 @@ public class Main
 
 
     /**
-     * Main method which initialises the GUI.
+     * <p>Main method which initialises the GUI.</p>
      * @param args Default arguments to static void main.
      */
     public static void main(String[] args)

@@ -61,14 +61,16 @@ public class DataAnalyser
     protected List<String> classes = new ArrayList<>();
 
 
-    //TODO REMOVE IF ERROR
-
+    /**
+     * ALl the possible feature values.
+     */
     public Hashtable<String, List<String>> featuresResultsTable= new Hashtable<>();
 
 
     /**
      * <p>This method is the constructor for the DataAnalyser class and is used to read in an input
      * string and manipulate it into variables which are easier to use. </p>
+     * @param inputData the string inputted into the Data Analyser
      */
     public DataAnalyser(String inputData)
     {
@@ -326,6 +328,7 @@ public class DataAnalyser
 
     /**
      * <p>This method is used to get the features of the dataset. </p>
+     * @return all the features of the dataset
      */
     public List<String> getFeatures()
     {
@@ -335,6 +338,7 @@ public class DataAnalyser
 
     /**
      * <p>This method is used to get the concept of the dataset. </p>
+     * @return the concept of the data.
      */
     public String getConcept() {
 
@@ -343,6 +347,7 @@ public class DataAnalyser
 
     /**
      * <p>This method is used to get the inputData as a string of the dataset. </p>
+     * @return the inputData string
      */
     public String getInputData() {
 
@@ -350,12 +355,17 @@ public class DataAnalyser
     }
     /**
      * <p>This method is used to get the classes of the dataset. </p>
+     * @return all the classes of the dataset.
      */
     public List<String> getClasses() {
 
         return classes;
     }
 
+    /**
+     * Returns all the possible feature values.
+     * @return the featureResults table.
+     */
     public Hashtable<String, List<String>> getFeatureResults()
     {
         return featuresResultsTable;

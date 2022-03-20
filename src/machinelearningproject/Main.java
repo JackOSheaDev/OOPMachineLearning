@@ -11,7 +11,10 @@ package machinelearningproject;
 
 public class Main
 {
-    //Main function.
+    /**
+     * Main function
+     * @param args default arguments to the function.
+     */
     public static void main(String[] args)
     {
         //Greeting
