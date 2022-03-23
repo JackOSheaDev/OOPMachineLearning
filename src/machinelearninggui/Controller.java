@@ -128,16 +128,17 @@ public class Controller implements ActionListener
         }
 
         //Commented out, accesses secondary database.
-        /*
+
         else if(view.getSuperhero().equals(e.getSource()))
 
         {
             System.out.println("Superhero dataset was chosen.");
-            dataset = "Superhero";
+            model.setConcept("The superhero dataset");
             model.setFilename("superhero.csv");
+            view.setupQuestion();
             getQuestion();
         }
-        */
+
         else
         {   //If an action event occurs otherwise, it is a part of the button array.
             for(int i=0;i<model.getChoices().size();i++)

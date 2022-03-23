@@ -98,7 +98,7 @@ public class View
         mainScreen.add(Box.createVerticalStrut(150));
         mainScreen.add(entrepreneur);
         //Used to enable the superhero dataset.
-        //mainScreen.add(superhero);
+        mainScreen.add(superhero);
         mainScreen.add(Box.createVerticalStrut(150));
         mainScreen.add(footerLabel);
 
