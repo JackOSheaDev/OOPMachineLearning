@@ -116,7 +116,8 @@ public class View
         questionPanel.removeAll();
         questionPanel.setLayout(new BoxLayout(questionPanel,BoxLayout.Y_AXIS));
         questionPanel.add(question);
-        questionPanel.add(Box.createVerticalStrut(175));
+        questionPanel.add(Box.createVerticalStrut(5));
+        //questionPanel.add(Box.createVerticalStrut(175));
 
         //Removes the main screen if present, and adds the question screen.
         getFrame().remove(getMainScreen());
