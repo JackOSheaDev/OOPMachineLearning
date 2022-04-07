@@ -23,6 +23,8 @@ functionality for numerical data rather than categorical data.
 https://www.youtube.com/watch?v=LR3jmVT92m4 Part 1 which shows the entrepreneur dataset.
 https://www.youtube.com/watch?v=LvwfaX1RHl0 Part 2 which shows the superhero dataset.
 
+## Link to Repo
+https://github.com/JackOSheaDev/OOPMachineLearning
 
 
 ## Classes:
